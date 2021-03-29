@@ -1,0 +1,38 @@
+{
+    "author": "",
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "ie <= 9"
+    ],
+    "dependencies": {
+        "classnames": "^2.2.6",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "react-redux": "^7.2.2",
+        "react-router-dom": "^5.2.0",
+        "redux": "^4.0.5",
+        "styled-components": "^5.2.1"
+    },
+    "description": "",
+    "devDependencies": {
+        "@types/classnames": "^2.2.11",
+        "@types/node": "^12.19.4",
+        "@types/react": "^16.9.56",
+        "@types/react-dom": "^16.9.9",
+        "@types/react-redux": "^7.1.11",
+        "@types/react-router-dom": "^5.1.6",
+        "@types/redux": "^3.6.0",
+        "@types/styled-components": "^5.1.4"
+    },
+    "keywords": [],
+    "main": "./src/index.tsx",
+    "name": "research19",
+    "scripts": {
+        "build": "npm run production",
+        "development": "npx @rosinfo.tech/cli development",
+        "production": "npx @rosinfo.tech/cli production",
+        "start": "npm run development"
+    },
+    "version": "0.0.1"
+}

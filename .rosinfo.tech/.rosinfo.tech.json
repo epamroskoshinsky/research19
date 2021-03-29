@@ -1,0 +1,107 @@
+{
+    "backup": {
+        "except": [
+            "/.DS_Store",
+            "/.build/",
+            "/.dist/",
+            "/.git/",
+            "/.idea/",
+            "/.npm/",
+            "/.process",
+            "/.rosinfo.tech.backup/",
+            "/.rosinfo.tech.secret.json",
+            "/.vscode/",
+            "/build/",
+            "/dist/",
+            "/node_modules/",
+            "/npm/",
+            "Thumbs.db",
+            "_MAC_OS"
+        ]
+    },
+    "production": {
+        "copies": {
+            "./src/assets/": "./build",
+            "./version": "./build/version.txt"
+        },
+        "entry": "./src/index.tsx",
+        "externals": {
+            "node_modules": false
+        },
+        "html": {
+            "template": "./src/index.html"
+        },
+        "output": {
+            "filename": "[fullhash].bundle.js",
+            "path": "build"
+        },
+        "outputDirectoryClear": true,
+        "plugins": {
+            "eslint": {
+                "fix": true
+            },
+            "interpolate": {
+                "WINDOW_TITLE": "The Application. Production"
+            }
+        },
+        "resolve": {
+            "alias": {
+                "@components": "./src/components",
+                "@src": "./src",
+                "@utils": "./src/utils",
+                "@services": "./src/services"
+            },
+            "extensions": [
+                ".ts",
+                ".tsx",
+                ".js",
+                ".jsx",
+                ".json"
+            ]
+        },
+        "sources": "./src/"
+    },
+    "development": {
+        "contentBase": "./src/assets/",
+        "copies": {
+            "./version": "./src/assets/version.txt"
+        },
+        "entry": "./src/index.tsx",
+        "externals": {
+            "node_modules": false
+        },
+        "html": {
+            "template": "./src/index.html"
+        },
+        "output": {
+            "filename": "[fullhash].bundle.js"
+        },
+        "outputDirectoryClear": true,
+        "plugins": {
+            "eslint": {
+                "fix": true
+            },
+            "interpolate": {
+                "WINDOW_TITLE": "The Application. Development"
+            }
+        },
+        "resolve": {
+            "alias": {
+                "@components": "./src/components",
+                "@src": "./src",
+                "@utils": "./src/utils",
+                "@services": "./src/services"
+            },
+            "extensions": [
+                ".ts",
+                ".tsx",
+                ".js",
+                ".jsx",
+                ".json"
+            ]
+        },
+        "sourceMaps": true,
+        "sources": "./src/"
+    },
+    "version": "0.0.1"
+}
